@@ -6,6 +6,8 @@ SetBatchLines -1
 comm:=","
 quot="
 
+msgbox Hello World
+
 Gui +hWndhMainWnd +AlwaysOnTop -Caption +Owner
 Gui Add, Picture, x-4 y-320 w985 h651, csjarchives2.png
 Gui Add, Picture, x-17 y326 w0 h0, Who is transferring the files? (Depositer)
