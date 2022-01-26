@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<SwithMailSettings>
+  <ServerSettings>
+    <FromName>Archive Submission System</FromName>
+    <FromAddress>archive-submissions@csjcanada.org</FromAddress>
+    <Username />
+    <Password>{passchange}==</Password>
+    <ObscurePassword>True</ObscurePassword>
+    <MailServer>outlook.office365.com</MailServer>
+    <MailServerPort>587</MailServerPort>
+    <SSL>True</SSL>
+    <Encoding />
+    <RequestReceipt>False</RequestReceipt>
+    <MessageID>False</MessageID>
+  </ServerSettings>
+  <EmailAddresses>
+    <To>{sender email address}</To>
+    <CC />
+    <BCC />
+    <ReplyTo>archive-submissions@csjcanada.org</ReplyTo>
+  </EmailAddresses>
+  <Attachments>
+    <AttachmentPath>{attachment}</AttachmentPath>
+  </Attachments>
+  <EmailContent>
+    <HTML>True</HTML>
+    <DontReplaceNewLine>True</DontReplaceNewLine>
+    <Subject>Archive Submission Received {submission-number}</Subject>
+    <Body>&lt;!-- #######  YAY, I AM THE SOURCE EDITOR! #########--&gt;
+&lt;table style="height: 85px; width: 100%; border-collapse: collapse;" border="0"&gt;
+&lt;tbody&gt;
+&lt;tr style="height: 49px;"&gt;
+&lt;td style="width: 100%; height: 49px;"&gt;
+&lt;h2 style="color: #2e6c80;"&gt;&lt;strong&gt;We have received your submission.&lt;/strong&gt;&lt;/h2&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 36px;"&gt;
+&lt;td style="width: 100%; height: 36px;"&gt;Attached to this email is your file manifest including the detailed information related to your files. Please keep this for your records.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table style="height: 83px; width: 100%; border-collapse: collapse; float: left;" border="0"&gt;
+&lt;tbody&gt;
+&lt;tr style="height: 169px;"&gt;
+&lt;td style="width: 1.42045%; height: 83px;"&gt;&lt;img src="https://images.squarespace-cdn.com/content/v1/5d9b9ee477e12405f07e497d/1572276417066-F2MWB88Z7B1HNYHNB2M6/csj-socialshare-logo-01.jpg" alt="Congregation of Sisters of St Joseph in Canada" width="265" height="172" /&gt;&lt;/td&gt;
+&lt;td style="width: 98.5794%; height: 83px;"&gt;
+&lt;p&gt;&lt;strong&gt;&amp;nbsp;Archive Submissions&lt;/strong&gt;&lt;br /&gt;&amp;nbsp;485 Windermere Rd., Box 487&lt;br /&gt;&amp;nbsp;London, ON N6A 4X3&lt;br /&gt;&amp;nbsp;(519) 432-3781 x 404&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://can01.safelinks.protection.outlook.com/?url=http%3A%2F%2Fwww.csjcanada.org%2F&amp;amp;data=04%7C01%7Cblalande%40csjcanada.org%7C7973ed1376934b09007608d9db81cb1e%7C9bb0728ff2be442d931a2b1228a2f553%7C1%7C0%7C637782178688569562%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&amp;amp;sdata=%2F6EaejXrXUKetxhmhem15XqQykd0wViJBfBHS9zNkoA%3D&amp;amp;reserved=0"&gt;&amp;nbsp;www.csjcanada.org&lt;/a&gt;&lt;br /&gt;&lt;a href="https://csjarchive.org/"&gt;&amp;nbsp;The Congregation of the Sisters of St. Joseph in Canada Consolidated Archives (csjarchive.org)&lt;/a&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</Body>
+    <BodyTxtFile />
+  </EmailContent>
+</SwithMailSettings>
