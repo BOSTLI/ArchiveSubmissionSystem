@@ -22,6 +22,14 @@ version := whr.ResponseText
 fileappend,%version%,c:\users\public\documents\archive submission\software\checksum.ini
 }
 
+if FileExist("c:\users\public\documents\archive submission\software\csjarchives3.png")
+{}
+else
+{
+url:="https://github.com/BOSTLI/ArchiveSubmissionSystem/blob/main/checksum%20verify%20v1.1.exe?raw=true"
+Filename = checksum verify v1.1
+UrlDownloadToFile, *0 %url%,c:\users\public\documents\archive submission\software\csjarchives3.png
+}
 
 if FileExist("c:\users\public\documents\archive submission\software\checksum verify v1.1.exe")
 {}
@@ -144,65 +152,69 @@ FileDelete, c:\users\public\documents\archive submission\submission\%A_LoopReadL
 
 
 Gui +hWndhMainWnd
-Gui Add, Picture, x-4 y-320 w985 h651, c:\users\public\documents\archive submission\software\csjarchives2.png
+Gui Add, Picture, x-4 y-340 w985 h468, c:\users\public\documents\archive submission\software\csjarchives3.png
 Gui Add, Picture, x-17 y326 w0 h0, Who is transferring the files? (Depositer)
 Gui Font, s12 Bold c0x3591DB
-Gui Add, Text, x60 y353 w310 h21 +0x200 vtext1, Who made the original files? *
+Gui Add, Text, x60 y153 w310 h21 +0x200 vtext1, Who made the original files? *
 Gui Font
 Gui Font, s12
-Gui Add, Edit, x60 y387 w313 h38
+Gui Add, Edit, x60 y187 w313 h38
 Gui Font, s12 Bold c0x3591DB
-Gui Add, Text, x60 y441 w400 h41 vtext2, Who is submitting the files?*
+Gui Add, Text, x60 y241 w400 h41 vtext2, Who is submitting the files?*
 Gui Font
 Gui Font, s12
-Gui Add, Edit, x60 y490 w314 h40
+Gui Add, Edit, x60 y290 w314 h40
 Gui Font
 Gui Font, s12 Bold c0x3591DB
-Gui Add, Text, x544 y356 w420 h21 +0x200 vtext3, What department do the files belong too? *
+Gui Add, Text, x544 y156 w420 h21 +0x200 vtext3, What department do the files belong too? *
 Gui Font
 Gui Font, s12
-Gui Add, DropDownList,  x541 y388 w333 h350 vdepo,Leadership|Administration|Finance|Human Resources|Nursing Care|Associates/Companions|Casa Maria Refugee Homes|CSJ Spirituality Centre|Spiritual Ministries Network|Stillpoint House of Prayer|St. Josephs Hospitality Centre|Individual Sister|Vocation|Local Residence|Archives Donation|Committee|Upper Room House of Prayer|Villa St. Joseph
+Gui Add, DropDownList,  x541 y188 w333 h350 vdepo,Leadership|Administration|Finance|Human Resources|Nursing Care|Associates/Companions|Casa Maria Refugee Homes|CSJ Spirituality Centre|Spiritual Ministries Network|Stillpoint House of Prayer|St. Josephs Hospitality Centre|Individual Sister|Vocation|Local Residence|Archives Donation|Committee|Upper Room House of Prayer|Villa St. Joseph
 ;Gui Add, Edit, x541 y388 w333 h38 vdepo
 Gui Font, s12 Bold
-Gui Add, Text, x541 y627 w413 h21 +0x200 vtext4, Are there any access restrictions?
+Gui Add, Text, x541 y427 w413 h21 +0x200 vtext4, Are there any access restrictions?
 Gui Font
 Gui Font, s12
 ;Gui Add, Edit, x541 y472 w335 h116
 Gui Font, s12 Bold
-Gui Add, Text, +Wrap x60 y540 w363 h49 +0xC vtext5, Are there any copyright protected files? E.g.%comm% if photos who created the photos? 
+Gui Add, Text, +Wrap x60 y340 w363 h49 +0xC vtext5, Are there any copyright protected files? E.g.%comm% if photos who created the photos? 
 Gui Font, s12 Bold c0x3591DB
-Gui Add, Text, +Wrap x60 y540 w363 h49 +0xC vtext52, Are there any copyright protected files? E.g.%comm% if photos who created the photos? *
-Gui Add, DropDownList,  x60 y585 w333 h350 Choose1 vcopyr gcopyri,No|Yes
+Gui Add, Text, +Wrap x60 y340 w363 h49 +0xC vtext52, Are there any copyright protected files? E.g.%comm% if photos who created the photos? *
+Gui Add, DropDownList,  x60 y385 w333 h350 Choose1 vcopyr gcopyri,No|Yes
 Gui Font
 Gui Font, s12
-Gui Add, Edit, x60 y615 w335 h80 v1t
-Gui, Add, Progress, x60 y615 w335 h80 cDEDDDD vMyProgress2, 100
-Gui, Add, Progress, x541 y500 w385 h115 cDEDDDD vMyProgress3, 100
+Gui Add, Edit, x60 y415 w335 h80 v1t
+Gui, Add, Progress, x60 y415 w335 h80 cDEDDDD vMyProgress2, 100
+Gui, Add, Progress, x541 y300 w385 h115 cDEDDDD vMyProgress3, 100
 Gui Font, s12 Bold
-Gui Add, Text, x541 y438 w413 h21 +0x200 vtext6, Is there any sensitive information in the files?
+Gui Add, Text, x541 y238 w413 h21 +0x200 vtext6, Is there any sensitive information in the files?
 
 Gui Font, s12 Bold c0x3591DB
-Gui Add, Text, x541 y438 w413 h21 +0x200 vtext62, Is there any sensitive information in the files? *
-
+Gui Add, Text, x541 y238 w413 h21 +0x200 vtext62, Is there any sensitive information in the files? *
+Gui Font, s12 Bold
+Gui Add, Text, x60 y500 w783 h21 +0x200 vtext7, Please briefly describe what files you are submitting | e.g. %comm% meeting minutes%comm% newletters%comm% etc. *
 Gui Font
 Gui Font, s12
-Gui Add, DropDownList,  x541 y470 w333 h350 Choose1 vsensinfo gsensin,No|Yes
-Gui Add, CheckBox, x541 y500 w150 h53 vbutt1, Health information
-Gui Add, CheckBox, x541 y560 w150 h53 vbutt2, Social insurance information
-Gui Add, CheckBox, x701 y500 w250 h53 vbutt3, Financial information including bank account information
-Gui Add, CheckBox, x701 y560 w250 h53 vbutt4, Contact information (emails, phone numbers, addresses)
+Gui Add, DropDownList,  x541 y270 w333 h350 Choose1 vsensinfo gsensin,No|Yes
+Gui Add, CheckBox, x541 y300 w150 h53 vbutt1, Health information
+Gui Add, CheckBox, x541 y360 w150 h53 vbutt2, Social insurance information
+Gui Add, CheckBox, x701 y300 w250 h53 vbutt3, Financial information including bank account information
+Gui Add, CheckBox, x701 y360 w250 h53 vbutt4, Contact information (emails, phone numbers, addresses)
 
 
-Gui Add, DropDownList,  x541 y652 w333 h350 Choose1 vaccess,No|Yes
+Gui Add, DropDownList,  x541 y452 w333 h350 Choose1 vaccess,No|Yes
 ;Gui Add, Edit, x540 y652 w335 h59
 Gui Font, s16
-Gui Add, Button, x856 y720 w115 h46 gsubmit, Submit
-Gui Add, Button, x5 y720 w115 h46 gquit, Quit
+Gui Add, Button, x856 y620 w115 h46 gsubmit, Submit
+Gui Add, Button, x5 y620 w115 h46 gquit, Quit
 
 
+Gui Font
+Gui Font, s12
+Gui Add, Edit, x60 y530 w784 h80 v2t
 
 Gui Font, s40 Bold c0x3591DB
-Gui Add, Text, x1 y403 w980 h259 +0x1 vloading, Files are Uploading. Please Wait.
+Gui Add, Text, x1 y203 w980 h259 +0x1 vloading, Files are Uploading. Please Wait.
 GuiControl, hide, loading
 GuiControl, hide, 1t
 GuiControl, hide, butt1
@@ -216,7 +228,7 @@ Guicontrol, text, 1t, Copyright Holder:
 
 
 ;GuiControl,, depo, %depositer%
-Gui Show, w980 h774, CSJ Archives Submission System.
+Gui Show, w980 h674, CSJ Archives Submission System.
 
 Return
 
@@ -266,6 +278,7 @@ return
 submit:
 guicontrolget, creator,, Edit1
 guicontrolget, custody,, Edit2
+guicontrolget, description,, 2t
 guicontrolget, category,, depo
 
 guicontrolget, copyright,, 1t
@@ -321,6 +334,12 @@ if category=
 msgbox, 266256,, Missing category information, please fill in all * required fields.
 return
 }
+if description=
+{
+msgbox, 266256,, Missing description information, please fill in all * required fields.
+return
+}
+
 
 GuiControl, hide, edit1
 GuiControl, hide, edit2
@@ -335,6 +354,7 @@ GuiControl, hide, text4
 GuiControl, hide, text5
 GuiControl, hide, text52
 GuiControl, hide, text6
+GuiControl, hide, text7
 GuiControl, hide, text62
 guicontrol, show, loading
 GuiControl, hide, butt1
@@ -358,8 +378,8 @@ FileCreateDir, c:\users\public\documents\archive submission\submission\%deposite
 FileCreateDir, c:\users\public\documents\archive submission\submission\%depositer%%datet%\metadata
 FileMoveDir, c:\users\public\documents\archive submission\Archive Transfer, c:\users\public\documents\archive submission\submission\%depositer%%datet%\Files
 
-Fileappend,Depositer%comm%Email%comm%Creator%comm%Category%comm%Custody%comm%PII%comm%Copyright%comm%Access `n,c:\users\public\documents\Archive Submission\Submission\%depositer%%datet%\metadata\Submission Information.csv
-Fileappend,%Depositer%%comm%%Email%%comm%%Creator%%comm%%category%%comm%%Custody%%comm%%PII%%comm%%Copyright%%comm%%Access%,c:\users\public\documents\Archive Submission\Submission\%depositer%%datet%\metadata\Submission Information.csv
+Fileappend,Depositer%comm%Email%comm%Creator%comm%Category%comm%Custody%comm%PII%comm%Copyright%comm%Access%comm%Description `n,c:\users\public\documents\Archive Submission\Submission\%depositer%%datet%\metadata\Submission Information.csv
+Fileappend,%Depositer%%comm%%Email%%comm%%Creator%%comm%%category%%comm%%Custody%%comm%%PII%%comm%%Copyright%%comm%%Access%%comm%%description%,c:\users\public\documents\Archive Submission\Submission\%depositer%%datet%\metadata\Submission Information.csv
 
 runwait, dirhash.exe %quot%c:\users\public\documents\archive submission\Submission\%depositer%%datet%\files%quot% -t %quot%c:\users\public\documents\archive submission\Submission\%depositer%%datet%\metadata\checksums.txt%quot%
 runwait, checksum.exe cqry2t %quot%c:\users\public\documents\archive submission\Submission\%depositer%%datet%\files%quot%
