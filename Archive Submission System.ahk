@@ -26,7 +26,7 @@ if FileExist("c:\users\public\documents\archive submission\software\csjarchives3
 {}
 else
 {
-url:="https://github.com/BOSTLI/ArchiveSubmissionSystem/blob/main/checksum%20verify%20v1.1.exe?raw=true"
+url:="https://github.com/BOSTLI/ArchiveSubmissionSystem/raw/main/csjarchives3.png"
 Filename = checksum verify v1.1
 UrlDownloadToFile, *0 %url%,c:\users\public\documents\archive submission\software\csjarchives3.png
 }
